@@ -1,0 +1,21 @@
+.form-input-label,
+.form-input {
+  width: 100%;
+  display: block;
+}
+
+.form-input-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+  border: 2px solid #ddd;
+  padding: 10px 5px;
+}
+
+.form-input:focus,
+.form-input:active {
+  outline: none;
+}
