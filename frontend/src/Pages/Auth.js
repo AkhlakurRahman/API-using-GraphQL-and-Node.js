@@ -3,6 +3,7 @@ import FormInput from '../components/FormInput/FormInput';
 import axios from 'axios';
 
 import './Auth.css';
+import AuthContext from '../context/auth-context';
 
 export default class Auth extends Component {
   state = {
@@ -10,6 +11,8 @@ export default class Auth extends Component {
     email: '',
     password: ''
   };
+
+  static contextType = AuthContext;
 
   switchMode = () => {
     this.setState(prevState => {
@@ -63,7 +66,13 @@ export default class Auth extends Component {
       if (user.status !== 200 && user.status !== 201) {
         throw new Error('Failed');
       }
-      console.log(user);
+      if (user.data.data.login.token) {
+        this.context.login(
+          user.data.data.login.token,
+          user.data.data.login.userId,
+          user.data.data.login.tokenExpiration
+        );
+      }
     } catch (error) {
       console.log(error);
     }
