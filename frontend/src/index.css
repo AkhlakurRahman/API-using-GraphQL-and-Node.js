@@ -3,3 +3,22 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.form-action button,
+.btn {
+  background-color: rgb(40, 107, 146);
+  font: inherit;
+  border: 1px solid rgb(49, 132, 180);
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px 15px;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.form-action button:hover,
+.form-action button:active,
+.btn:hover,
+.btn:active {
+  background-color: rgb(44, 86, 110);
+}
