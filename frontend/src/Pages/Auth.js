@@ -85,6 +85,8 @@ export default class Auth extends Component {
           name="email"
           type="email"
           value={this.state.email}
+          id="email"
+          htmlFor="email"
           handleChange={this.handleChange}
           label="Email"
           required
@@ -93,6 +95,8 @@ export default class Auth extends Component {
           name="password"
           type="password"
           value={this.state.password}
+          id="password"
+          htmlFor="password"
           handleChange={this.handleChange}
           label="Password"
           required

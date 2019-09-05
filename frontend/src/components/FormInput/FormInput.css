@@ -1,5 +1,6 @@
 .form-input-label,
-.form-input {
+.form-input,
+.group textarea {
   width: 100%;
   display: block;
 }
@@ -13,9 +14,11 @@
   border-radius: 2px;
   border: 2px solid #ddd;
   padding: 10px 5px;
+  transition: all 0.3s;
 }
 
 .form-input:focus,
 .form-input:active {
-  outline: none;
+  outline: rgb(40, 107, 146);
+  border: 2px solid rgb(40, 107, 146);
 }
