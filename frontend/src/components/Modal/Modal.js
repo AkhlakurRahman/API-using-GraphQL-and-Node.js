@@ -1,9 +1,33 @@
 import React from 'react';
 
-const Modal = ({ title }) => {
+import './Modal.css';
+
+const Modal = ({
+  title,
+  children,
+  canCancel,
+  canConfirm,
+  handleConfirm,
+  handleCancelingBackdrop
+}) => {
   return (
     <div className="modal-control">
-      <header>{title}</header>
+      <header className="modal__header">
+        <h1>{title}</h1>
+      </header>
+      <section className="modal__content">{children}</section>
+      <section className="modal__action">
+        {canCancel && (
+          <button className="btn" onClick={handleCancelingBackdrop}>
+            Cancel
+          </button>
+        )}
+        {canConfirm && (
+          <button className="btn" onClick={handleConfirm}>
+            Confirm
+          </button>
+        )}
+      </section>
     </div>
   );
 };
